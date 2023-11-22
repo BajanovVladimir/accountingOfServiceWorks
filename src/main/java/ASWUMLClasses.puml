@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+Class Element{
+ String name
+ String type
+ Double price
+ String getName()
+ String getType()
+ Double getPrice()
+ void setPrice()
+}
+
+Class Board{
+}
+
+@enduml
