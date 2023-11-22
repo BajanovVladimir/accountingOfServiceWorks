@@ -10,7 +10,27 @@ Class Element{
  void setPrice()
 }
 
-Class Board{
+Class BoardElement{
+ String designation
+ Element element
+ String getDesignation()
+ Element getElement()
+ void setElement
 }
 
+Class Board{
+ List<BoardElement> elementsList
+ List<BoardElement> getElementsList()
+}
+
+Class Unit{
+ List<Board> boardsList
+ List<Board> getBoardsList()
+}
+
+Class Product{
+ List<Unit> unitsList
+ List<Unit> getUnitsList()
+ void addUnit(Unit newUnit)
+}
 @enduml
