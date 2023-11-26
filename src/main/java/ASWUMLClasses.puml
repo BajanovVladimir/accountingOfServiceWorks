@@ -10,12 +10,17 @@ Class Element{
  void setPrice()
 }
 
+Class Equipment{
+  String name
+  String type
+}
+
 Class BoardElement{
  String designation
  Element element
  String getDesignation()
  Element getElement()
- void setElement
+ void setElement()
 }
 
 Class Board{
@@ -32,5 +37,11 @@ Class Product{
  List<Unit> unitsList
  List<Unit> getUnitsList()
  void addUnit(Unit newUnit)
+}
+
+Enum Type{
+ Board
+ Unit
+ Product
 }
 @enduml
