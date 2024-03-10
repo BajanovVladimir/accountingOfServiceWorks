@@ -12,12 +12,12 @@
     </section>
     <section>
             <div class="formView">
-                <form th:action="@{/contacts/companies/companyCreateView}" method="post">
+                <form th:action="@{/contacts/companies/companyCreateView}" method="post" th:object="${organization}">
                     <div class="input">
-                        <input name="name" placeholder="Организация">
+                        <input name="name" placeholder="Организация" th:field="*{name}">
                     </div>
                     <div class="input">
-                        <input name="city" placeholder="город">
+                        <input name="city" placeholder="город" th:field="*{city}">
                     </div>
                     <div class="input">
                         <input id="submitButton" type="submit"  value="Сохранить" />

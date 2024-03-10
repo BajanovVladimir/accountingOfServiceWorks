@@ -18,12 +18,11 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     private List<Person> personList;
 
-    Organization(){}
+    public Organization(){}
 
-    Organization(String name, String city){
+    public Organization(String name, String city){
         this.name = name;
         this.city = city;
-
     }
 
     public String getName(){
