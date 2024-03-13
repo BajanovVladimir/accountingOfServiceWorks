@@ -3,7 +3,7 @@ package ru.bazhanov.contacts.dto;
 public class OrganizationDTO {
     private String name;
     private String city;
-    OrganizationDTO(){
+    public OrganizationDTO(){
     }
     public String getName(){
         return this.name;

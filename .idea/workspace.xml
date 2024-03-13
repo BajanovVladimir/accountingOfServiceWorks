@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Initial comment">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/OrganizationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationService.java" afterDir="false" />
+    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Implemented saving Organizations in the database">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/NewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/companies/companyCreateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/companies/CompanyCreateViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/companies/companyCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/companies/companyCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/OrganizationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/OrganizationDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,30 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok">
+    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_ok&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="accountingOfServiceWorks [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -151,6 +171,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok" />
         <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
         <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
       </list>
@@ -179,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700996533187</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented saving Organizations in the database">
+      <created>1710058259651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710058259651</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +224,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created UML diagrams" />
     <MESSAGE value="Changed UML diagram. I configured the project in build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed UML diagram. I configured the project in build.gradle" />
+    <MESSAGE value="Implemented saving Organizations in the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented saving Organizations in the database" />
   </component>
 </project>
