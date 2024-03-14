@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Renamed CompaniesCreateViewController to OrganizationCreateViewController">
+    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="changed the save method in the OrganizationBDServiceImpl class and its tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/OrganizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/OrganizationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/organization/OrganizationCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/organizations/OrganizationCreateViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/companies/companyCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,30 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_false">
+  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently">
+    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="OrganizationBDServiceImplTests.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,44 +185,25 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="accountingOfServiceWorks [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_true&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="accountingOfServiceWorks [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -219,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently" />
         <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_false" />
+        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_true" />
         <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok" />
         <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_not_ok" />
-        <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
-        <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710058259651</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed the save method in the OrganizationBDServiceImpl class and its tests">
+      <created>1710392500806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710392500806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,6 +284,7 @@
     <MESSAGE value="Created UML diagrams" />
     <MESSAGE value="Changed UML diagram. I configured the project in build.gradle" />
     <MESSAGE value="Implemented saving Organizations in the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented saving Organizations in the database" />
+    <MESSAGE value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
   </component>
 </project>

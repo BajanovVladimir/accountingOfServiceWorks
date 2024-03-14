@@ -6,6 +6,8 @@ import ru.bazhanov.contacts.model.Organization;
 import java.util.List;
 
 public interface OrganizationRepository extends JpaRepository<Organization,Integer> {
-    Organization findByName(String name);
+    List<Organization> findByName(String name);
     List<Organization> findByCity(String city);
+    Organization findByNameAndCity(String name, String city);
+
 }

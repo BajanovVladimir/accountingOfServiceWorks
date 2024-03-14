@@ -33,4 +33,18 @@ public class OrganizationBDServiceImplTests {
         Assertions.assertFalse(orgService.save(orgDTO));
         Assertions.assertEquals(size, orgRepository.findAll().size());
     }
+
+    @Test
+    public void test_that_save_is_true_when_saving_an_existing_company_without_saving_it_reverently(){
+        OrganizationDTO orgDTO = new OrganizationDTO();
+        orgDTO.setCity("City2");
+        orgDTO.setName("Company2");
+        orgService.save(orgDTO);
+        int size = orgRepository.findAll().size();
+        OrganizationDTO orgDTONext = new OrganizationDTO();
+        orgDTONext.setCity("City2");
+        orgDTONext.setName("Company2");
+        Assertions.assertTrue(orgService.save(orgDTONext));
+        Assertions.assertEquals(size, orgRepository.findAll().size());
+    }
 }

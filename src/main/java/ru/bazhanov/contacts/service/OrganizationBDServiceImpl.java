@@ -22,7 +22,9 @@ public class OrganizationBDServiceImpl implements OrganizationService {
             return false;
         }
         Organization organization = new Organization(organizationDTO.getName(),organizationDTO.getCity());
-        organizationRepository.save(organization);
+        if(organizationRepository.findByNameAndCity(organizationDTO.getName(),organizationDTO.getCity()) == null){
+            organizationRepository.save(organization);
+        }
         return true;
     }
 }
