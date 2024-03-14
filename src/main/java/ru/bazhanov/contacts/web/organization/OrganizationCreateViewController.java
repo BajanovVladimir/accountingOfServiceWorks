@@ -1,4 +1,4 @@
-package ru.bazhanov.contacts.web.companies;
+package ru.bazhanov.contacts.web.organization;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,13 +13,13 @@ import ru.bazhanov.contacts.service.OrganizationService;
 
 @Controller
 @RequestMapping("/contacts/companies/companyCreateView")
-public class CompanyCreateViewController {
+public class OrganizationCreateViewController {
 
 
     private final OrganizationService organizationService;
 
     @Autowired
-    CompanyCreateViewController(OrganizationService organizationService){
+    OrganizationCreateViewController(OrganizationService organizationService){
        this.organizationService = organizationService;
     }
 
