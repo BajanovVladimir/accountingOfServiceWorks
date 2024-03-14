@@ -17,12 +17,20 @@ public class OrganizationBDServiceImplTests {
     OrganizationRepository orgRepository;
 
     @Test
-    public void test_that_save_is_ok(){
+    public void test_that_save_is_true(){
         OrganizationDTO orgDTO = new OrganizationDTO();
         orgDTO.setName("Company1");
         orgDTO.setCity("City1");
         int size = orgRepository.findAll().size();
-        orgService.save(orgDTO);
+        Assertions.assertTrue( orgService.save(orgDTO));
         Assertions.assertEquals(size+1, orgRepository.findAll().size());
+    }
+
+    @Test
+    public void test_that_save_is_false(){
+        OrganizationDTO orgDTO = new OrganizationDTO();
+        int size = orgRepository.findAll().size();
+        Assertions.assertFalse(orgService.save(orgDTO));
+        Assertions.assertEquals(size, orgRepository.findAll().size());
     }
 }

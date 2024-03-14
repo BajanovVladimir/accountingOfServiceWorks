@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Implemented saving Organizations in the database">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/NewTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
+    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Renamed CompaniesCreateViewController to OrganizationCreateViewController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/OrganizationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/OrganizationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/organization/OrganizationCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/organizations/OrganizationCreateViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/companies/companyCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,53 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok">
+  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_false">
+    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_false&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_not_ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_not_ok&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="OrganizationBDServiceImplTests.test_that_save_is_ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -171,7 +219,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_false" />
         <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok" />
+        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_not_ok" />
         <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
         <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
       </list>

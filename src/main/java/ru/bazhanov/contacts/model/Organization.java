@@ -3,6 +3,7 @@ package ru.bazhanov.contacts.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "organizations")
@@ -31,5 +32,18 @@ public class Organization {
 
     public String getCity(){
         return this.city;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Organization that = (Organization) o;
+        return name.equals(that.name) && city.equals(that.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, city);
     }
 }

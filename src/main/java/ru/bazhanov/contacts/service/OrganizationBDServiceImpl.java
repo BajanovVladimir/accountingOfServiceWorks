@@ -18,12 +18,11 @@ public class OrganizationBDServiceImpl implements OrganizationService {
 
     @Override
     public Boolean save(OrganizationDTO organizationDTO) {
-        Organization organization = new Organization(organizationDTO.getName(),organizationDTO.getCity());
-        if ( organizationRepository.save(organization) == null) {
+        if(organizationDTO.getName() == null && organizationDTO.getCity() == null){
             return false;
-        }else
-       {
-            return true;
         }
+        Organization organization = new Organization(organizationDTO.getName(),organizationDTO.getCity());
+        organizationRepository.save(organization);
+        return true;
     }
 }

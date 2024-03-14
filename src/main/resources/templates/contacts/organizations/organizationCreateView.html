@@ -12,7 +12,7 @@
     </section>
     <section>
             <div class="formView">
-                <form th:action="@{/contacts/companies/companyCreateView}" method="post" th:object="${organization}">
+                <form th:action="@{/contacts/organizations/organizationCreateView}" method="post" th:object="${organization}">
                     <div class="input">
                         <input name="name" placeholder="Организация" th:field="*{name}">
                     </div>

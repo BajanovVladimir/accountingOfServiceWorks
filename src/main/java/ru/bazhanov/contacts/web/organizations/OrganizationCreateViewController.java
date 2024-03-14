@@ -1,4 +1,4 @@
-package ru.bazhanov.contacts.web.organization;
+package ru.bazhanov.contacts.web.organizations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ import ru.bazhanov.contacts.model.Organization;
 import ru.bazhanov.contacts.service.OrganizationService;
 
 @Controller
-@RequestMapping("/contacts/companies/companyCreateView")
+@RequestMapping("/contacts/organizations/organizationCreateView")
 public class OrganizationCreateViewController {
 
 
@@ -25,7 +25,7 @@ public class OrganizationCreateViewController {
 
     @GetMapping
     public ModelAndView showCompanyCreateView(){
-        ModelAndView mv =new ModelAndView("contacts/companies/companyCreateView");
+        ModelAndView mv =new ModelAndView("contacts/organizations/organizationCreateView");
         mv.addObject("organization", new Organization());
         return mv;
     }
@@ -33,7 +33,7 @@ public class OrganizationCreateViewController {
     @PostMapping
     public ModelAndView addCompany(@ModelAttribute("organization") OrganizationDTO organization){
         organizationService.save(organization);
-        ModelAndView mv = new ModelAndView("redirect:/contacts/companies/companyCreateView");
+        ModelAndView mv = new ModelAndView("redirect:/contacts/organizations/organizationCreateView");
         mv.addObject("organization", new Organization());
         return mv;
     }
