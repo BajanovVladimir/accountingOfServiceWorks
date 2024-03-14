@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="changed the save method in the OrganizationBDServiceImpl class and its tests">
+    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/OrganizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/OrganizationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently">
+  <component name="RunManager">
     <configuration name="OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -266,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710392500806</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository">
+      <created>1710395657275</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710395657275</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +290,7 @@
     <MESSAGE value="Changed UML diagram. I configured the project in build.gradle" />
     <MESSAGE value="Implemented saving Organizations in the database" />
     <MESSAGE value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
+    <MESSAGE value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
   </component>
 </project>

@@ -14,10 +14,10 @@
             <div class="formView">
                 <form th:action="@{/contacts/organizations/organizationCreateView}" method="post" th:object="${organization}">
                     <div class="input">
-                        <input name="name" placeholder="Организация" th:field="*{name}">
+                        <input name="name" placeholder="Организация" th:field="*{name}" required>
                     </div>
                     <div class="input">
-                        <input name="city" placeholder="город" th:field="*{city}">
+                        <input name="city" placeholder="город" th:field="*{city}" required>
                     </div>
                     <div class="input">
                         <input id="submitButton" type="submit"  value="Сохранить" />
