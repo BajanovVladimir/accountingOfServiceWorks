@@ -12,9 +12,38 @@
   </section>
   <section>
     <div class="formView">
-      <div class="input">
-        <input>
-      </div>
+      <form th:action="@{/contacts/contactCreateView}" method="post" th:object="${contact}">
+        <p>
+          Организация
+
+        </p>
+        <select name="organizationID" th:field="*{organizationID}" id="organizationID">
+          <option th:each="organization:${organizationList}" th:value="${organization.getId()}" th:text="${organization.getName()}"></option>
+        </select>
+        <div class="input">
+          <input name="lastName" placeholder="Фамилия" th:field="*{lastName}">
+        </div>
+
+        <div class="input">
+          <input name="firstName" placeholder="Имя" th:field="*{firstName}">
+        </div>
+        <div class="input">
+          <input name="patronymic" placeholder="Отчество" th:field="*{patronymic}">
+        </div>
+        <div class="input">
+          <input name="phone" placeholder="Телефон" th:field="*{phone}">
+        </div>
+        <div class="input">
+          <input name="email" placeholder="Email" th:field="*{email}">
+        </div>
+<!--        <div class="input">-->
+<!--          <input name="name" placeholder="name" th:field="*{name}">-->
+<!--        </div>-->
+
+        <div class="input">
+          <input id="submitButton" type="submit"  value="Сохранить" />
+        </div>
+      </form>
     </div>
   </section>
 </body>

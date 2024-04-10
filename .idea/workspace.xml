@@ -4,9 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository">
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/dto/ContactDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/repository/EmailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/repository/PhoneNumberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/ContactServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/EmailServiceBDImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/PhoneNumberBDImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/PhoneNumberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/ContactServiceImplTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/EmailServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/PhoneNumberServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/organizations/organizationCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/OrganizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/repository/OrganizationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/model/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationBDServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/service/OrganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/ContactCreateClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/ContactCreateClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset-create-DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-DB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/NewTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/contacts/service/OrganizationBDServiceImplTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +116,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -104,7 +129,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently&quot;" />
+            <option value="&quot;ru.bazhanov.contacts.service.ContactServiceImplTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -114,7 +139,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PhoneNumberServiceImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +152,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_false&quot;" />
+            <option value="&quot;ru.bazhanov.contacts.service.PhoneNumberServiceImplTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -137,7 +162,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_not_ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PhoneNumberServiceImplTest.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +175,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_not_ok&quot;" />
+            <option value="&quot;ru.bazhanov.contacts.service.PhoneNumberServiceImplTest.test_that_save_is_false&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,7 +185,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_ok" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'accountingOfServiceWorks.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,8 +197,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_ok&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -183,25 +206,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrganizationBDServiceImplTests.test_that_save_is_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="accountingOfServiceWorks [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.OrganizationBDServiceImplTests.test_that_save_is_true&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -219,18 +240,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_correct_when_saving_an_existing_company_without_saving_it_reverently" />
-        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_false" />
-        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_true" />
-        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_ok" />
-        <item itemvalue="Gradle.OrganizationBDServiceImplTests.test_that_save_is_not_ok" />
+        <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
+        <item itemvalue="Gradle.Tests in 'accountingOfServiceWorks.test'" />
+        <item itemvalue="Gradle.ContactServiceImplTests" />
+        <item itemvalue="Gradle.PhoneNumberServiceImplTest" />
+        <item itemvalue="Gradle.PhoneNumberServiceImplTest.test_that_save_is_false" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e68e6bc3-e903-4c64-8d44-dca5fb679179" name="Changes" comment="" />
+      <changelist id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="" />
       <created>1700673907142</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

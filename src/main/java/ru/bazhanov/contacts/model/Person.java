@@ -2,6 +2,9 @@ package ru.bazhanov.contacts.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
+
 @Entity
 @Table(name = "persons")
 public class Person {
@@ -17,8 +20,10 @@ public class Person {
     private String firstName;
 
     private String patronymic;
-    private String phone;
-    private String email;
+    @OneToMany(mappedBy = "person")
+    private List<PhoneNumber> phoneNumbers;
+    @OneToMany(mappedBy = "person")
+    private List<Email> emails ;
 
     @ManyToOne()
     @JoinColumn(name = "organization_id")
@@ -26,12 +31,11 @@ public class Person {
 
     Person(){}
 
-    Person(String lastName,String firstName, String patronymic, String phone,String email ){
+    public Person(String lastName, String firstName, String patronymic,  Organization organization){
         this.lastName = lastName;
         this.firstName = firstName;
         this.patronymic = patronymic;
-        this.phone = phone;
-        this.email = email;
+        this.organization = organization;
     }
 
     public String getLastName(){
@@ -46,18 +50,11 @@ public class Person {
         return this.patronymic;
     }
 
-    public String getPhone(){
-        return this.phone;
+    public List<PhoneNumber> getPhoneNumbers(){
+        return this.phoneNumbers;
     }
 
-    public String getEmail(){
-        return this.email;
-    }
-    public void setPhone(String phone){
-        this.phone = phone;
-    }
-
-    public void setEmail(String email){
-        this.email = email;
+    public List<Email> getEmail(){
+        return this.emails;
     }
 }

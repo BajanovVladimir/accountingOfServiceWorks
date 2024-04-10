@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.bazhanov.contacts.dto.OrganizationDTO;
 import ru.bazhanov.contacts.model.Organization;
-import ru.bazhanov.contacts.model.repository.OrganizationRepository;
+import ru.bazhanov.contacts.repository.OrganizationRepository;
+
+import java.util.List;
 
 @Service
 public class OrganizationBDServiceImpl implements OrganizationService {
@@ -21,10 +23,19 @@ public class OrganizationBDServiceImpl implements OrganizationService {
         if(organizationDTO.getName() == null && organizationDTO.getCity() == null){
             return false;
         }
-        Organization organization = new Organization(organizationDTO.getName(),organizationDTO.getCity());
         if(organizationRepository.findByNameAndCity(organizationDTO.getName(),organizationDTO.getCity()) == null){
+            Organization organization = new Organization(organizationDTO.getName(),organizationDTO.getCity());
             organizationRepository.save(organization);
         }
         return true;
+    }
+
+    @Override
+    public List<Organization> findAll() {
+        return organizationRepository.findAll();
+    }
+    @Override
+    public Organization findById(Integer id) {
+        return organizationRepository.getReferenceById(id);
     }
 }

@@ -2,12 +2,13 @@ package ru.bazhanov.contacts.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 @Entity
 @Table(name = "organizations")
-public class Organization {
+public class Organization  implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "organization_id")
@@ -15,9 +16,8 @@ public class Organization {
     @Column(name = "organization_name")
     private String name;
     private String city;
-
     @OneToMany(mappedBy = "organization")
-    private List<Person> personList;
+    private  List<Person> personList;
 
     public Organization(){}
 
@@ -26,24 +26,24 @@ public class Organization {
         this.city = city;
     }
 
+    public Integer getId(){
+        return this.id;
+    }
+
     public String getName(){
         return this.name;
     }
-
     public String getCity(){
         return this.city;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Organization that = (Organization) o;
-        return name.equals(that.name) && city.equals(that.city);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, city);
-    }
+//    @Override
+//    public String toString() {
+//        return "Organization{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", city='" + city + '\'' +
+//                ", personList=" + personList +
+//                '}';
+//    }
 }

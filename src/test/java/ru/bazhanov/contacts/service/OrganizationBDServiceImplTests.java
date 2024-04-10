@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.bazhanov.contacts.dto.OrganizationDTO;
-import ru.bazhanov.contacts.model.repository.OrganizationRepository;
+import ru.bazhanov.contacts.model.Organization;
+import ru.bazhanov.contacts.repository.OrganizationRepository;
+
+import java.util.List;
 
 
 @SpringBootTest
@@ -35,7 +38,7 @@ public class OrganizationBDServiceImplTests {
     }
 
     @Test
-    public void test_that_save_is_true_when_saving_an_existing_company_without_saving_it_reverently(){
+    public void test_that_save_is_true_when_saving_an_existing_company_without_saving_its_reverently(){
         OrganizationDTO orgDTO = new OrganizationDTO();
         orgDTO.setCity("City2");
         orgDTO.setName("Company2");
@@ -45,6 +48,7 @@ public class OrganizationBDServiceImplTests {
         orgDTONext.setCity("City2");
         orgDTONext.setName("Company2");
         Assertions.assertTrue(orgService.save(orgDTONext));
-        Assertions.assertEquals(size, orgRepository.findAll().size());
+        List<Organization> orgList = orgRepository.findAll();
+        Assertions.assertEquals(size,orgList.size());
     }
 }
