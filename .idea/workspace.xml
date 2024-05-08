@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Added new classes email and phoneNumber to allow a person to have multiple contacts">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/CircuitBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Product.java" afterDir="false" />
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Added new classes to the equipment model">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-products-tables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/CircuitBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/CircuitBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset-create-DB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-contacts_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset-create-contacts_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-contacts-tables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.accountingOfServiceWorks [build]">
+  <component name="RunManager">
     <configuration name="ContactServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,29 +135,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.bazhanov.contacts.service.PhoneNumberServiceImplTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PhoneNumberServiceImplTest.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.PhoneNumberServiceImplTest.test_that_save_is_false&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,6 +186,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="accountingOfServiceWorks [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -223,10 +221,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
+        <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
         <item itemvalue="Gradle.Tests in 'accountingOfServiceWorks.test'" />
         <item itemvalue="Gradle.ContactServiceImplTests" />
         <item itemvalue="Gradle.PhoneNumberServiceImplTest" />
-        <item itemvalue="Gradle.PhoneNumberServiceImplTest.test_that_save_is_false" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710395657275</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added new classes to the equipment model">
+      <created>1714983837879</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714983837879</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +311,7 @@
     <MESSAGE value="Implemented saving Organizations in the database" />
     <MESSAGE value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
     <MESSAGE value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
+    <MESSAGE value="Added new classes to the equipment model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new classes to the equipment model" />
   </component>
 </project>

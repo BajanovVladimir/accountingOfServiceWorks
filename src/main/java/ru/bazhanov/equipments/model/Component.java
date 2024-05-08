@@ -13,21 +13,23 @@ public class Component {
     private Integer id;
     @ManyToOne
     @JoinColumn(name = "component_type_id")
-    @Column(name = "component_type")
-    private ComponentType type;
+    private ComponentType componentType;
     @Column(name = "component_name")
     private String name;
     @Column(name = "component_description")
     private String description;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "component",cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    },fetch = FetchType.LAZY)
     private Set<Element> elementSet;
 
     public Component() {
     }
 
     public Component(ComponentType type, String name, String description) {
-        this.type = type;
+        this.componentType = type;
         this.name = name;
         this.description = description;
     }
@@ -42,11 +44,11 @@ public class Component {
 
 
     public ComponentType getType() {
-        return type;
+        return componentType;
     }
 
     public void setType(ComponentType type) {
-        this.type = type;
+        this.componentType = type;
     }
 
     public String getName() {

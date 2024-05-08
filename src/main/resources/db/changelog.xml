@@ -5,4 +5,7 @@
     <changeSet id="1" author="Bazhanov">
         <sqlFile path="db/changeset-create-contacts-tables.sql"/>
     </changeSet>
+    <changeSet id="2" author="Bazhanov">
+        <sqlFile path="db/changeset-create-products-tables.sql"/>
+    </changeSet>
    </databaseChangeLog>

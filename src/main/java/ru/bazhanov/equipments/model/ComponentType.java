@@ -13,7 +13,7 @@ public class ComponentType {
     private Integer id;
     @Column(name = "component_type_name")
     private String name;
-    @OneToMany(mappedBy = "component")
+    @OneToMany(mappedBy = "componentType")
     private Set<Component> componentSet;
 
     ComponentType(){};
