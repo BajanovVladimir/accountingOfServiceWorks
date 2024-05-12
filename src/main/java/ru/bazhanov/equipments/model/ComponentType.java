@@ -2,6 +2,7 @@ package ru.bazhanov.equipments.model;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,7 +15,7 @@ public class ComponentType {
     @Column(name = "component_type_name")
     private String name;
     @OneToMany(mappedBy = "componentType")
-    private Set<Component> componentSet;
+    private Set<Component> componentSet = new HashSet<>();
 
     ComponentType(){};
     public ComponentType(String name){

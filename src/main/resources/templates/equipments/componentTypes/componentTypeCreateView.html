@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Новый тип элемента</title>
+</head>
+<body>
+<section>
+  <h1>
+    Новый тип элемента
+  </h1>
+</section>
+<section>
+  <div class="formView">
+    <form th:action="@{/componentTypeCreateView}" method="post" th:object="${componentType}">
+      <div class="input">
+        <input name="name" placeholder="Тип" th:field="*{name}" required>
+      </div>
+      <div class="input">
+        <input id="submitButton" type="submit"  value="Сохранить" />
+      </div>
+    </form>
+  </div>
+</section>
+</body>
+</html>

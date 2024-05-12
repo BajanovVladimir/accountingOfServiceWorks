@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Added new classes to the equipment model">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-products-tables.sql" afterDir="false" />
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Created a checkset of product tables and set up entities for them">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ComponentTypeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/ComponentTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/componentTypes/componentTypeCreateView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/CircuitBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/CircuitBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changeset-create-contacts_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-contacts-tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +94,15 @@
       <recent name="C:\Работа\программы\ПроектыJ\Clone\accountingOfServiceWorks\src\test\resources" />
       <recent name="C:\Работа\программы\ПроектыJ\Clone\accountingOfServiceWorks\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ContactServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ComponentTypeBDServiceImplTests.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -111,7 +115,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.ContactServiceImplTests&quot;" />
+            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_save_is_false&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -121,7 +125,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PhoneNumberServiceImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ComponentTypeBDServiceImplTests.test_that_save_is_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +138,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.contacts.service.PhoneNumberServiceImplTest&quot;" />
+            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_save_is_true&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_save_is_false" />
+        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_save_is_true" />
         <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
         <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
         <item itemvalue="Gradle.Tests in 'accountingOfServiceWorks.test'" />
-        <item itemvalue="Gradle.ContactServiceImplTests" />
-        <item itemvalue="Gradle.PhoneNumberServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714983837879</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created a checkset of product tables and set up entities for them">
+      <created>1715186118424</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715186118424</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +323,18 @@
     <MESSAGE value="changed the save method in the OrganizationBDServiceImpl class and its tests" />
     <MESSAGE value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
     <MESSAGE value="Added new classes to the equipment model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new classes to the equipment model" />
+    <MESSAGE value="Created a checkset of product tables and set up entities for them" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a checkset of product tables and set up entities for them" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
