@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Created a checkset of product tables and set up entities for them">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ComponentTypeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/ComponentTypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/componentTypes/componentTypeCreateView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" afterDir="false" />
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Fixed saving the contact to the database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ComponentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/ComponentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentBDServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/components/ComponentCreateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/components/componentCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/ComponentType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contacts/contactCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +64,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Class" />
-        <option value="HTML File" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -79,17 +82,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Работа/программы/ПроектыJ/Clone/accountingOfServiceWorks/src/main/resources/db&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "DefaultPlantUmlFileTemplate": "UML Class",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/vladimirbazanov/IdeaProjects/accountingOfServiceWorks/src/main/resources/templates/equipments/components"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/equipments/components" />
       <recent name="C:\Работа\программы\ПроектыJ\Clone\accountingOfServiceWorks\src\main\resources\db" />
       <recent name="C:\Работа\программы\ПроектыJ\Clone\accountingOfServiceWorks\src\test\resources" />
       <recent name="C:\Работа\программы\ПроектыJ\Clone\accountingOfServiceWorks\src\main\resources" />
@@ -102,7 +106,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="ComponentTypeBDServiceImplTests.test_that_save_is_false" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ComponentTypeBDServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -115,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_save_is_false&quot;" />
+            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ComponentTypeBDServiceImplTests.test_that_save_is_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_save_is_true&quot;" />
+            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -148,7 +152,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'accountingOfServiceWorks.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,6 +164,8 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.bazhanov.contacts.service.ContactServiceImplTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_save_is_false" />
-        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_save_is_true" />
         <item itemvalue="Gradle.accountingOfServiceWorks [build]" />
         <item itemvalue="Gradle.accountingOfServiceWorks [clean]" />
-        <item itemvalue="Gradle.Tests in 'accountingOfServiceWorks.test'" />
+        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests" />
+        <item itemvalue="Gradle.ContactServiceImplTests" />
+        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715186118424</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created a view, controller, repository and service to create a new type of component">
+      <created>1715530721855</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715530721855</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed saving the contact to the database">
+      <created>1716911780422</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716911780422</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,17 +344,8 @@
     <MESSAGE value="Added to the save method of the OrganizationBDServiceImpl class a check for the presence of a saved organization in the repository" />
     <MESSAGE value="Added new classes to the equipment model" />
     <MESSAGE value="Created a checkset of product tables and set up entities for them" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a checkset of product tables and set up entities for them" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Created a view, controller, repository and service to create a new type of component" />
+    <MESSAGE value="Fixed saving the contact to the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed saving the contact to the database" />
   </component>
 </project>

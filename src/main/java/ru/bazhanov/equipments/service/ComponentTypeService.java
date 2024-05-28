@@ -7,6 +7,7 @@ import ru.bazhanov.equipments.model.ComponentType;
 import java.util.List;
 
 public interface ComponentTypeService {
-    Boolean saveComponentType(ComponentTypeDTO componentTypeDTO);
+    Boolean save(ComponentTypeDTO componentTypeDTO);
     List<ComponentType> findAll();
+    ComponentType findByID(int typeID);
 }

@@ -10,8 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.service.ComponentTypeService;
 
-import java.util.concurrent.CountedCompleter;
-
 @Controller
 @RequestMapping("/componentTypeCreateView")
 public class ComponentTypeCreateViewController {
@@ -27,7 +25,7 @@ public class ComponentTypeCreateViewController {
 
     @PostMapping
     public ModelAndView saveComponentType(@ModelAttribute("componentType") ComponentTypeDTO newComponentType){
-        componentTypeService.saveComponentType(newComponentType);
+        componentTypeService.save(newComponentType);
         ModelAndView mv = new ModelAndView("equipments/componentTypes/componentTypeCreateView");
         mv.addObject("componentType", new ComponentTypeDTO());
         return mv;

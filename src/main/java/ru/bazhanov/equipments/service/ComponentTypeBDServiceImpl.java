@@ -6,6 +6,7 @@ import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.model.ComponentType;
 import ru.bazhanov.equipments.repository.ComponentTypeRepository;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -15,7 +16,7 @@ public class ComponentTypeBDServiceImpl implements ComponentTypeService{
     private ComponentTypeRepository componentTypeRepository;
 
     @Override
-    public Boolean saveComponentType(ComponentTypeDTO componentTypeDTO) {
+    public Boolean save(ComponentTypeDTO componentTypeDTO) {
         if (componentTypeDTO == null || componentTypeDTO.getName() == null) {
            return false;
         }
@@ -26,6 +27,13 @@ public class ComponentTypeBDServiceImpl implements ComponentTypeService{
 
     @Override
     public List<ComponentType> findAll() {
-        return componentTypeRepository.findAll();
+        List<ComponentType> componentTypeList = componentTypeRepository.findAll();
+        Collections.sort(componentTypeList);
+        return componentTypeList;
+    }
+
+    @Override
+    public ComponentType findByID(int typeID) {
+        return componentTypeRepository.getReferenceById(typeID);
     }
 }

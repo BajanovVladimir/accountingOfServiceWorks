@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Сохранить новый элемент</title>
+</head>
+<body>
+<section>
+  <h1>
+    Новый элемент
+  </h1>
+</section>
+<section>
+  <div class="formView">
+    <form th:action="@{/componentCreateView}" method="post" th:object="${component}">
+      <p>
+        Элемент
+      </p>
+      <button><a th:href="@{/componentTypeCreateView}">Добавить</a></button>
+      <select name="type" th:field="*{type}" id="type">
+        <option th:each="type:${componentTypeList}" th:value="${type.getId()}" th:text="${type.getName()}"></option>
+      </select>
+      <div class="input">
+        <input name="name" placeholder="Наименование" th:field="*{name}">
+      </div>
+      <div class="input">
+        <input name="description" placeholder="Описание" th:field="*{description}">
+      </div>
+      <div class="input">
+        <input id="submitButton" type="submit"  value="Сохранить" />
+      </div>
+    </form>
+  </div>
+</section>
+</body>
+</html>

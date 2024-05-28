@@ -3,11 +3,12 @@ package ru.bazhanov.equipments.model;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
+
 import java.util.Set;
 
 @Entity
 @Table(name = "component_types")
-public class ComponentType {
+public class ComponentType implements Comparable<ComponentType> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "component_type_id")
@@ -36,5 +37,10 @@ public class ComponentType {
 
     public Set<Component> getComponentSet() {
         return componentSet;
+    }
+
+    @Override
+    public int compareTo(ComponentType o) {
+        return name.compareTo(o.name);
     }
 }
