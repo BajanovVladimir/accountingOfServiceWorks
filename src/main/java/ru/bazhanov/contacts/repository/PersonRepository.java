@@ -7,7 +7,5 @@ import ru.bazhanov.contacts.model.Person;
 import java.util.List;
 
 public interface PersonRepository extends JpaRepository<Person,Integer> {
-    List<Person> findByLastName(String lastName);
-    List<Person> findByFirstName(String firstName);
     Person findByLastNameAndFirstNameAndPatronymicAndOrganization(String lastName, String firstName, String patronymic, Organization organization);
 }

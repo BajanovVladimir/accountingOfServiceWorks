@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 @Entity
@@ -17,7 +18,7 @@ public class Organization  implements Serializable{
     private String name;
     private String city;
     @OneToMany(mappedBy = "organization")
-    private  List<Person> personList;
+    private  List<Person> personList = new LinkedList<>();
 
     public Organization(){}
 
@@ -37,13 +38,11 @@ public class Organization  implements Serializable{
         return this.city;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Organization{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", city='" + city + '\'' +
-//                ", personList=" + personList +
-//                '}';
-//    }
+    public List<Person> getPersonList() {
+        return personList;
+    }
+
+    public void setPersonList(List<Person> personList) {
+        this.personList = personList;
+    }
 }
