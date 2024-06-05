@@ -12,10 +12,14 @@ import ru.bazhanov.equipments.service.ComponentTypeService;
 @RequestMapping("/componentCreateView")
 public class ComponentCreateViewController {
 
+
+    private final ComponentTypeService componentTypeService;
+    private final ComponentService componentService;
     @Autowired
-    private ComponentTypeService componentTypeService;
-    @Autowired
-    private ComponentService componentService;
+    ComponentCreateViewController(ComponentTypeService componentTypeService, ComponentService componentService){
+        this.componentTypeService = componentTypeService;
+        this.componentService = componentService;
+    }
 
     @GetMapping
     public ModelAndView showComponentCreateView(){

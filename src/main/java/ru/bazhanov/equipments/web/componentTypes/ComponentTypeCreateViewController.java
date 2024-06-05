@@ -14,7 +14,7 @@ import ru.bazhanov.equipments.service.ComponentTypeService;
 @RequestMapping("/componentTypeCreateView")
 public class ComponentTypeCreateViewController {
     @Autowired
-    private ComponentTypeService componentTypeService;
+    ComponentTypeService componentTypeService;
 
     @GetMapping
     public ModelAndView showComponentTypeCreateView(){

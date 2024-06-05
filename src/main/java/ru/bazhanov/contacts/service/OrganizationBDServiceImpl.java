@@ -1,6 +1,7 @@
 package ru.bazhanov.contacts.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.bazhanov.contacts.dto.OrganizationDTO;
 import ru.bazhanov.contacts.model.Organization;
@@ -32,7 +33,7 @@ public class OrganizationBDServiceImpl implements OrganizationService {
 
     @Override
     public List<Organization> findAll() {
-        return organizationRepository.findAll();
+        return organizationRepository.findAll(Sort.by(Sort.Order.asc("name")));
     }
     @Override
     public Organization findById(Integer id) {

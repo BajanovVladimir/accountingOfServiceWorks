@@ -1,19 +1,23 @@
 package ru.bazhanov.equipments.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.model.ComponentType;
 import ru.bazhanov.equipments.repository.ComponentTypeRepository;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service
 public class ComponentTypeBDServiceImpl implements ComponentTypeService{
 
+
+    private final ComponentTypeRepository componentTypeRepository;
     @Autowired
-    private ComponentTypeRepository componentTypeRepository;
+    public ComponentTypeBDServiceImpl(ComponentTypeRepository componentTypeRepository) {
+        this.componentTypeRepository = componentTypeRepository;
+    }
 
     @Override
     public Boolean save(ComponentTypeDTO componentTypeDTO) {
@@ -27,9 +31,7 @@ public class ComponentTypeBDServiceImpl implements ComponentTypeService{
 
     @Override
     public List<ComponentType> findAll() {
-        List<ComponentType> componentTypeList = componentTypeRepository.findAll();
-        Collections.sort(componentTypeList);
-        return componentTypeList;
+        return componentTypeRepository.findAll(Sort.by(Sort.Order.asc("name")));
     }
 
     @Override
