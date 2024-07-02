@@ -1,4 +1,4 @@
-package ru.bazhanov.contacts.web;
+package ru.bazhanov.web.contactsControllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

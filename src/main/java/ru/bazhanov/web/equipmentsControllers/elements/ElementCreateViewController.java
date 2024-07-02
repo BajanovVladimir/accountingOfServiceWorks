@@ -1,4 +1,4 @@
-package ru.bazhanov.equipments.web.elements;
+package ru.bazhanov.web.equipmentsControllers.elements;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
