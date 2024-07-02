@@ -8,8 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import ru.bazhanov.equipments.dto.ComponentDTO;
 import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.model.ComponentType;
-import ru.bazhanov.equipments.service.ComponentService;
-import ru.bazhanov.equipments.service.ComponentTypeService;
+import ru.bazhanov.equipments.service.interfaces.ComponentService;
+import ru.bazhanov.equipments.service.interfaces.ComponentTypeService;
 
 import java.util.List;
 

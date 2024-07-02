@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Сохранить новый продукт</title>
+</head>
+<body>
+<section>
+    <h1>
+        Новый продукт
+    </h1>
+</section>
+<section>
+    <div class="formView">
+        <form th:action="@{/productCreateView}" method="post" th:object="${product}">
+            <p>
+                Продукт
+            </p>
+            <div class="input">
+                <input name="name" placeholder="Название" th:field="*{name}">
+            </div>
+            <div class="input">
+                <input id="submitButton" type="submit"  value="Сохранить" />
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>

@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8"/>
-  <title>Сохранить новый элемент</title>
+  <title>Сохранить новый компонент</title>
 </head>
 <body>
 <section>
   <h1>
-    Новый элемент
+    Новый компонент
   </h1>
 </section>
 <section>
   <div class="formView">
     <form th:action="@{/componentCreateView}" method="post" th:object="${component}">
       <p>
-        Элемент
+        Компонент
       </p>
       <button><a th:href="@{/componentTypeCreateView}">Добавить</a></button>
       <select name="type" th:field="*{type}" id="type">

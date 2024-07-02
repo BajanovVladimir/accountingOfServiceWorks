@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.model.ComponentType;
-import ru.bazhanov.equipments.service.ComponentTypeService;
+import ru.bazhanov.equipments.service.interfaces.ComponentTypeService;
 
 import java.util.List;
 

@@ -19,11 +19,11 @@ public class Component {
     @Column(name = "component_description")
     private String description;
 
-    @ManyToMany(mappedBy = "component",cascade = {
+    @ManyToMany(mappedBy = "components",cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     },fetch = FetchType.LAZY)
-    private Set<Element> elementSet;
+    private Set<Element> elements;
 
     public Component() {
     }
@@ -34,8 +34,8 @@ public class Component {
         this.description = description;
     }
 
-    public Set<Element> getElementSet(){
-        return this.elementSet;
+    public Set<Element> getElements(){
+        return this.elements;
     }
 
     public Integer getId() {

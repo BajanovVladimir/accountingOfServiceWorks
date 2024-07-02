@@ -4,16 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Created a component save">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ElementDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/ElementRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ElementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentBDServiceImplTests.java" afterDir="false" />
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Sorted search of all elements for ComponentType, Component and Organization">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/CircuitBoardDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/CircuitBoardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/implementations/CircuitBoardBDServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/implementations/ComponentBDServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/implementations/ProductBDServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/CircuitBoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/circuitBoards/CircuitBoardCreateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/elements/ElementCreateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/products/ProductCreateViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/circuitBoards/circuitBoardCreateView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/elements/elementCreateView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/products/productCreateView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentBDServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/equipments/model/Component_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/equipments/model/Component_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/equipments/model/Element_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/java/ru/bazhanov/equipments/model/Element_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ElementDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/ElementDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentBDServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/ComponentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeBDServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/implementations/ComponentTypeBDServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ComponentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/ComponentTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/ElementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/ElementService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/components/ComponentCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/components/ComponentCreateViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipments/components/componentCreateView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipments/components/componentCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentBDServiceImplTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/bazhanov/equipments/ComponentTypeBDServiceImplTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,15 +100,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/vladimirbazanov/IdeaProjects/accountingOfServiceWorks/src/main/resources/templates/equipments/components"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladimirbazanov/IdeaProjects/accountingOfServiceWorks/src/main/resources/templates/equipments/components&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/equipments/components" />
@@ -101,7 +123,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'ru.bazhanov'">
+  <component name="RunManager">
     <configuration name="ComponentBDServiceImplTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -230,11 +252,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ComponentBDServiceImplTests" />
         <item itemvalue="Gradle.Tests in 'ru.bazhanov'" />
         <item itemvalue="Gradle.Tests in 'ru.bazhanov.contacts'" />
         <item itemvalue="Gradle.ComponentBDServiceImplTests.test_that_save_is_ok" />
         <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted" />
-        <item itemvalue="Gradle.ComponentBDServiceImplTests" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716914886750</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Sorted search of all elements for ComponentType, Component and Organization">
+      <created>1717604527068</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717604527068</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +383,18 @@
     <MESSAGE value="Created a view, controller, repository and service to create a new type of component" />
     <MESSAGE value="Fixed saving the contact to the database" />
     <MESSAGE value="Created a component save" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a component save" />
+    <MESSAGE value="Sorted search of all elements for ComponentType, Component and Organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sorted search of all elements for ComponentType, Component and Organization" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/ElementBDServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

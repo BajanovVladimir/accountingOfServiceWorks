@@ -1,4 +1,4 @@
-package ru.bazhanov.equipments.service;
+package ru.bazhanov.equipments.service.interfaces;
 
 
 import ru.bazhanov.equipments.dto.ComponentDTO;

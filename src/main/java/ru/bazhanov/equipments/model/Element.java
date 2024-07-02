@@ -3,11 +3,13 @@ package ru.bazhanov.equipments.model;
 import jakarta.persistence.*;
 import org.springframework.context.annotation.EnableMBeanExport;
 
+import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Table(name = "elements")
 public class Element {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "element_id")
     private Integer id;
 
@@ -23,13 +25,13 @@ public class Element {
             joinColumns = @JoinColumn(name = "element_id"),
             inverseJoinColumns = @JoinColumn(name = "component_id")
     )
-    private Set<Component> component;
+    private Set<Component> components = new HashSet<>();
     @ManyToOne()
     @JoinColumn(name = "circuit_board_id")
     private CircuitBoard circuitBoard;
 
     Element(){}
-    public Element(String name, String description){
+    public Element(String name,  String description){
         this.name = name;
         this.description = description;
     }
@@ -55,12 +57,12 @@ public class Element {
         this.description = description;
     }
 
-    public Set<Component> getComponent() {
-        return component;
+    public Set<Component> getComponents() {
+        return components;
     }
 
-    public void setComponent(Set<Component> component) {
-        this.component = component;
+    public void setComponents(Set<Component> component) {
+        this.components = components;
     }
 
     public CircuitBoard getCircuitBoard() {

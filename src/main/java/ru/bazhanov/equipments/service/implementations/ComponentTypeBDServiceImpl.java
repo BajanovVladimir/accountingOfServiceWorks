@@ -1,4 +1,4 @@
-package ru.bazhanov.equipments.service;
+package ru.bazhanov.equipments.service.implementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -6,11 +6,12 @@ import org.springframework.stereotype.Service;
 import ru.bazhanov.equipments.dto.ComponentTypeDTO;
 import ru.bazhanov.equipments.model.ComponentType;
 import ru.bazhanov.equipments.repository.ComponentTypeRepository;
+import ru.bazhanov.equipments.service.interfaces.ComponentTypeService;
 
 import java.util.List;
 
 @Service
-public class ComponentTypeBDServiceImpl implements ComponentTypeService{
+public class ComponentTypeBDServiceImpl implements ComponentTypeService {
 
 
     private final ComponentTypeRepository componentTypeRepository;
