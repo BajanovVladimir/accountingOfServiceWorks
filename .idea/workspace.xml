@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Sorted search of all elements for ComponentType, Component and Organization">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/ContactCreateClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/contactsControllers/ContactCreateClassController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/contacts/web/organizations/OrganizationCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/contactsControllers/organizations/OrganizationCreateViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/circuitBoards/CircuitBoardCreateViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/componentTypes/ComponentTypeCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/equipmentsControllers/componentTypes/ComponentTypeCreateViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/components/ComponentCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/equipmentsControllers/components/ComponentCreateViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/elements/ElementCreateViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/web/products/ProductCreateViewController.java" beforeDir="false" />
+    <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Placed all controllers in the  directory web">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/Specialist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Equipment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Repair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/orders/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/MainViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/ordersControllers/OrderCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mainView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/stylesMainView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orders/new" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/orders/orderCreateView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,8 @@
     &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vladimirbazanov/IdeaProjects/accountingOfServiceWorks/src/main/resources/templates/equipments/components&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladimirbazanov/IdeaProjects/accountingOfServiceWorks/src/main/resources/templates/equipments/components&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -146,29 +151,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.bazhanov.equipments.ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'ru.bazhanov'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,6 +197,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="accountingOfServiceWorks [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -228,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.accountingOfServiceWorks [bootJar]" />
         <item itemvalue="Gradle.ComponentBDServiceImplTests" />
         <item itemvalue="Gradle.Tests in 'ru.bazhanov'" />
         <item itemvalue="Gradle.Tests in 'ru.bazhanov.contacts'" />
         <item itemvalue="Gradle.ComponentBDServiceImplTests.test_that_save_is_ok" />
-        <item itemvalue="Gradle.ComponentTypeBDServiceImplTests.test_that_findAll_is_sorted" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717604527068</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Placed all controllers in the  directory web">
+      <created>1719935841438</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719935841438</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,7 +370,8 @@
     <MESSAGE value="Fixed saving the contact to the database" />
     <MESSAGE value="Created a component save" />
     <MESSAGE value="Sorted search of all elements for ComponentType, Component and Organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorted search of all elements for ComponentType, Component and Organization" />
+    <MESSAGE value="Placed all controllers in the  directory web" />
+    <option name="LAST_COMMIT_MESSAGE" value="Placed all controllers in the  directory web" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
