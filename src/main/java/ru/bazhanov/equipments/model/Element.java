@@ -1,8 +1,6 @@
 package ru.bazhanov.equipments.model;
 
 import jakarta.persistence.*;
-import org.springframework.context.annotation.EnableMBeanExport;
-
 import java.util.HashSet;
 import java.util.Set;
 @Entity
@@ -15,6 +13,7 @@ public class Element {
 
     @Column(name = "element_name")
     private String name;
+
 
     @Column(name = "element_description")
     private String description;
@@ -61,7 +60,7 @@ public class Element {
         return components;
     }
 
-    public void setComponents(Set<Component> component) {
+    public void setComponents(Set<Component> components) {
         this.components = components;
     }
 

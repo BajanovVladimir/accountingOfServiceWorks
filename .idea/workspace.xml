@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="101f4a60-7dd7-4f40-b388-ed7f2a2c4f19" name="Changes" comment="Placed all controllers in the  directory web">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/Specialist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Equipment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Repair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/orders/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/MainViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/ordersControllers/OrderCreateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/dto/EquipmentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/repository/EquipmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/implementations/EquipmentBDImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/service/interfaces/EquipmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/ordersControllers/EquipmentsAddViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changeset-create-equipments-tables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/orders/equipmentAddView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/stylesMainView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orders/new" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/orders/orderCreateView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Equipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/equipments/model/Equipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/equipmentsControllers/components/ComponentCreateViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bazhanov/web/equipmentsControllers/components/ComponentCreateViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +63,8 @@
       <list>
         <option value="UML Class" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

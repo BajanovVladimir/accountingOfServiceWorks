@@ -24,7 +24,6 @@ public class ComponentCreateViewController {
     @GetMapping
     public ModelAndView showComponentCreateView(){
         ModelAndView mv = new ModelAndView("equipments/components/componentCreateView");
-
         mv.addObject("component",new ComponentDTO());
         mv.addObject("componentTypeList", componentTypeService.findAll());
         return mv;
